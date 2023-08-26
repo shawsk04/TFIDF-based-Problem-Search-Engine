@@ -1,0 +1,22 @@
+{
+  "name": "tfidf-based-problem-search-engine",
+  "version": "1.0.0",
+  "description": "Problem search engine for Leetcode and CSES problems",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shawsk04/TFIDF-based-Problem-Search-Engine.git"
+  },
+  "author": "Sonu Kumar Shaw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shawsk04/TFIDF-based-Problem-Search-Engine/issues"
+  },
+  "homepage": "https://github.com/shawsk04/TFIDF-based-Problem-Search-Engine#readme",
+  "dependencies": {
+    "keyword-extractor": "^0.0.25"
+  }
+}
