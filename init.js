@@ -38,8 +38,6 @@ frequency.push(cnt);
 // console.log(distinctKeywordsArray[0]);
 // console.log(keywordsArray[0]);
 // console.log(frequency.length);
-
-// console.log("\n");
 // console.log(frequency[0] / 3285);
 
 for(let i = 0; i < frequency.length; i++){
