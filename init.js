@@ -48,7 +48,6 @@ const writeStream = fs.createWriteStream('database/keywords.txt');
 const pathName = writeStream.path;
 distinctKeywordsArray.forEach(value => writeStream.write(`${value}\n`));
 
-
 const writeStream1 = fs.createWriteStream('database/IDF.txt');
 const pathName1 = writeStream1.path;
 IDF.forEach(value => writeStream1.write(`${value}\n`));
@@ -96,29 +95,28 @@ for(let i = 1; i < 3286; i++){
     for(let m = 0; m < extraction_result.length; m++){
         if(distinctExtractedKeywords[k] === extraction_result[m]){
             cnt++;
-        }else{
+        }
+        else{
             freqOfKeywordsInExtractionResult.push(cnt);
             cnt = 0;
             k++;
             m--;
         }
     }
+
     freqOfKeywordsInExtractionResult.push(cnt);
 
     for(let m = 0; m < distinctExtractedKeywords.length; m++){
         if(freqOfKeywordsInExtractionResult[m] != 0){
             let KWindex = distinctKeywordsArray.indexOf(distinctExtractedKeywords[m]);
             let TFval = freqOfKeywordsInExtractionResult[m] / (extraction_result.length);
-
             let TFIDFval = TFval * IDF[KWindex];
-
             magnitude[i - 1] += (TFIDFval * TFIDFval);
+
             fs.appendFileSync("database/TFIDF.txt", `${i} ${KWindex} ${TFIDFval}\n`, "utf-8");
         }
     }
-
     magnitude[i - 1] = Math.sqrt(magnitude[i - 1]);
-
 }
 
 const writeStream2 = fs.createWriteStream('database/magnitude.txt');
@@ -128,7 +126,6 @@ writeStream2.end();
 
 console.log("TFIDF created successfully");
 console.log('readFile called');
-
 
 console.log(IDF);
 console.log(distinctKeywordsArray);
