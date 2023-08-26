@@ -9,24 +9,6 @@ const N = 3285;
 problemDatabasePath = path.join(__dirname, '..', 'database/problems/')
 
 const responseArrayGenerator = (question, uniquekeywords, IDF, TFIDF_array, magnitude, problem_titles, problem_urls) =>{
-    // console.log(question)
-    // console.log("-------------------------------------------------------------------------------------------------")
-    // console.log(uniquekeywords.slice(0,10))
-    // console.log("-------------------------------------------------------------------------------------------------")
-
-    // console.log(IDF.slice(0,10))
-    // console.log("-------------------------------------------------------------------------------------------------")
-
-    // console.log(TFIDF_array.slice(0,10))
-    // console.log("-------------------------------------------------------------------------------------------------")
-
-    // console.log(magnitude.slice(0,10))
-    // console.log("-------------------------------------------------------------------------------------------------")
-
-    // console.log(problem_titles.slice(0,10))
-    // console.log("-------------------------------------------------------------------------------------------------")
-    // console.log(problem_urls.slice(0,10))
-
     
     let matchedFileIndexWithSimilarity = [];
     let queryKW_unique = extractKeywords(question, true);
@@ -35,12 +17,11 @@ const responseArrayGenerator = (question, uniquekeywords, IDF, TFIDF_array, magn
     let magnitude_TFIDF_vector = 0;
     let frequency = findFrequency(queryKW_unique, queryKW_withDup);
     
-
     for(let i = 0; i < queryKW_unique.length; i++){
         let kWindex = uniquekeywords.indexOf(queryKW_unique[i]);
 
-        console.log("uniquekeyword ",uniquekeywords)
-        console.log("index of ",queryKW_unique[i],"->",kWindex)
+        // console.log("uniquekeyword ",uniquekeywords)
+        // console.log("index of ",queryKW_unique[i],"->",kWindex)
 
         if(kWindex != -1){
             let t = (frequency[i] * parseFloat(IDF[kWindex])) / queryKW_unique.length;
@@ -49,8 +30,8 @@ const responseArrayGenerator = (question, uniquekeywords, IDF, TFIDF_array, magn
         }
     }
 
-    console.log("query_TFIDF_vector", query_TFIDF_vector)
-    console.log("magnitude_TFIDF_vector", magnitude_TFIDF_vector)
+    // console.log("query_TFIDF_vector", query_TFIDF_vector)
+    // console.log("magnitude_TFIDF_vector", magnitude_TFIDF_vector)
 
     magnitude_TFIDF_vector = Math.sqrt(magnitude_TFIDF_vector);
 
