@@ -1,0 +1,39 @@
+#page-title{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;    
+    font-weight: 800;
+    font-size: 45px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+.container{
+    margin-bottom: 30px;
+}
+
+body {
+    background: linear-gradient(to bottom, #99c2ff 180px, #fff 100px);
+    margin: 0;
+    min-height: 100vh;
+}
+
+.search-btn{
+    border-radius: 5px;
+    padding:10px 20px 10px 20px ;
+    background-color: white;
+    color: black;
+    border-top: solid 3px #3399ff;
+    border-left: solid 3px #3399ff;
+    border-bottom: none;
+    border-right: none;
+    font-size: 20px;
+}
+
+.search-btn:hover{
+    transition: 0.2s;
+    color: white;
+    background-color: #3399ff;
+}
+
