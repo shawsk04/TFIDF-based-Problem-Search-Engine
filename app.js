@@ -29,6 +29,7 @@ app.post("/search", (req, res) => {
   const arr = getProblemList(question);
   console.log(arr);
 
-  res.render("searchResult",{resp: arr});
+  if(arr.length == 0) res.render("unavailable");
+  else res.render("searchResult",{resp: arr});
 
 });
