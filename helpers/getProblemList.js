@@ -36,4 +36,4 @@ function getProblemList(question) {
 
 }
 
-module.exports = {getProblemList};
+module.exports = {getProblemList, readFileAsArr};
