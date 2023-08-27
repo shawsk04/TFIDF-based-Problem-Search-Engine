@@ -1,7 +1,7 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const path = require("path")
+
 const {getProblemList, readFileAsArr} = require("./helpers/getProblemList")
 
 const problem_titles = readFileAsArr('./database/problem_titles.txt');
@@ -12,7 +12,7 @@ const problem_urls = readFileAsArr('./database/problem_urls.txt');
 const app = express();
 app.use(express.json());
 app.set("view engine", "ejs");
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, "/public")));
 
 const port = process.env.PORT || 8000;
