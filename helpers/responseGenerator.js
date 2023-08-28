@@ -4,7 +4,7 @@ const {extractKeywords} = require('./extractor');
 const {findFrequency} = require('./findFrequency');
 
 const N = 3285;
-problemDatabasePath = '../database/problems/'
+problemDatabasePath = './database/problems/'
 
 
 const responseArrayGenerator = (question, uniquekeywords, IDF, TFIDF_array, magnitude, problem_titles, problem_urls) =>{
