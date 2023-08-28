@@ -21,6 +21,7 @@ app.listen(port, () => {
   console.log("Server is running on port " + port);
 }); 
 
+
 //GET request to home page
 app.get("/", (req, res) => {
   res.render("index");

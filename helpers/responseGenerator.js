@@ -3,7 +3,6 @@ const path = require('path');
 const {extractKeywords} = require('./extractor');
 const {findFrequency} = require('./findFrequency');
 
-
 const N = 3285;
 problemDatabasePath = path.join(__dirname, '..', 'database/problems/')
 
