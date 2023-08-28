@@ -7,12 +7,12 @@ let readFileAsArr = (filepath) =>{
     return data;
 }
 
-const IDF = readFileAsArr('./database/IDF.txt');
-const uniquekeywords = readFileAsArr('./database/keywords.txt');
-const TFIDF = readFileAsArr('./database/TFIDF.txt');
-const magnitude = readFileAsArr('./database/magnitude.txt');
-const problem_titles = readFileAsArr('./database/problem_titles.txt');
-const problem_urls = readFileAsArr('./database/problem_urls.txt');
+const IDF = readFileAsArr('../database/IDF.txt');
+const uniquekeywords = readFileAsArr('../database/keywords.txt');
+const TFIDF = readFileAsArr('../database/TFIDF.txt');
+const magnitude = readFileAsArr('../database/magnitude.txt');
+const problem_titles = readFileAsArr('../database/problem_titles.txt');
+const problem_urls = readFileAsArr('../database/problem_urls.txt');
 
 const N = 3285;
 
