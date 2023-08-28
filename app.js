@@ -42,7 +42,7 @@ app.get("/question/:doc_no", (req, res) => {
 
   const doc_no = req.params.doc_no;
   const idx = doc_no - 1;
-  const probStatement = readFileAsArr(".\\database\\problems\\problem_text_"+ (idx + 1) +".txt");
+  const probStatement = readFileAsArr("./database/problems/problem_text_"+ (idx + 1) +".txt");
 
   res.render("questionDescription", {
       title: problem_titles[idx],
